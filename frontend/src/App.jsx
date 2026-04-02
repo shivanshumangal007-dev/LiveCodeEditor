@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import "./app.css";
+import "./App.css";
 import { Editor } from "@monaco-editor/react";
 import {MonacoBinding} from 'y-monaco'
 import * as Y from 'yjs'
