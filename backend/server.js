@@ -6,7 +6,7 @@ import { Server } from "socket.io";
 const app = express();
 const server = http.createServer(app);
 
-
+app.use(express.static("public"));
 const io = new Server(server, {
     cors: {
         origin: "*",
@@ -17,9 +17,6 @@ const io = new Server(server, {
 const ySocketIO = new YSocketIO(io);
 ySocketIO.initialize();
 
-app.get("/", (req, res) => {
-	res.send("Hello World!");
-});
 
 app.get("/health" , (req, res) => {
     res.status(200).json({message: "Server is healthy"});

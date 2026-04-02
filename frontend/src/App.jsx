@@ -27,7 +27,8 @@ const App = () => {
 		if (!username || !isEditorReady) return;
 
 		const provider = new SocketIOProvider(
-			"http://localhost:3000",
+			// "http://localhost:3000",
+			"/",
 			"monaco-demo",
 			yDoc,
 			{ autoConnect: true },
